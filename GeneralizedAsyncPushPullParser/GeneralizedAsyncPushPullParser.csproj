@@ -5,4 +5,12 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OhNoPub.ImplicitCastAnalyzer" Version="1.0.0" />
+  </ItemGroup>
+
 </Project>

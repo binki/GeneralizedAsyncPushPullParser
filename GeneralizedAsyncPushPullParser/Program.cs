@@ -6,7 +6,16 @@ namespace GeneralizedAsyncPushPullParser
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var parser = new Parser();
+            parser.Token += (token) =>
+            {
+                Console.WriteLine($"token: “{token}”");
+            };
+            parser.Push("hi");
+            parser.Push(" ");
+            parser.Push("there ");
+            parser.Push("man");
+            parser.Push(null);
         }
     }
 }
